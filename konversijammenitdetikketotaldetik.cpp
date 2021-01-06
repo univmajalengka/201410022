@@ -1,29 +1,48 @@
 //konversi jam menit detik ke total detik
 //konversi total detik ke jam menit dan detik
 //mencari perbedaan dari 2 buah jam (program billing telepon / warnet)
-//deklarasi:
-Bilangan Bulat j1,m1,d1,td1,j2,m2,d2,td2,j3,m3,d3,td3
-deskripsi program:
-	
-//masukan waktu awal ex	9:25:30
-input(j1)
-input(m1)
-input(d1)
-
-//masukan waktu akhir ex 10:25:30
-input(j2)
-input(m2)
-input(d2)
-
-///proses konversi waktu ke td
-td1=konversi(j1,m1,d1)
-td2=konversi(j2,m2,d2)
-
-//operasi pengurangan
-td3=td2-td1
-
-//konversi td ke j3, m3, d3
-j3,m3,d3 => (td3)
-
-//tampilan layar ex 1:0:0
-output(j3,m3,d3)
+#include<iostream>
+using namespace std;
+int function_totaldetik(int j, int m, int d);
+int function_waktu (int td);
+void tampil (int show);
+int main()
+{
+	cout<<"-- Program Function Konversi Total Detik --"<<endl;
+	int td, waktu, a, b, c, d;
+	td=function_totaldetik(a, b, c);
+	tampil(td);
+	waktu=function_waktu(td);
+	return 0;
+}
+//function mencari total detik
+int function_totaldetik(int j, int m, int d){
+	int td;
+	cout<<">> Konversi Jam Menit Detik Ke Total Detik <<"<<endl;
+	cout<<"Masukan waktu"<<endl;
+	cout<<"Jam = ";cin>>j;
+	cout<<"Menit = ";cin>>m;
+	cout<<"Detik = ";cin>>d;
+	td=(j*3600)+(m*60)+d;
+	cout<<"Total Detik =";
+	return td;
+}
+//function konversi total detik
+int function_waktu(int td)
+{
+	int j, m, sm, d;
+	cout<<endl;
+	cout<<">> Konversi total detik ke jam, menit, detik <<"<<endl;
+	cout<<"Masukan total detik :";
+	cin>>td;
+	j=td/3600;
+	sm=td%3600;
+	m=sm/60;
+	d=sm%60;
+	cout<<"waktu Awalnya ="<<j<<";"<<m<<";"<<d;
+	return 0;
+}
+void tampil (int show)
+{
+	cout<<show;
+}
