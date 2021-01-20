@@ -4,12 +4,12 @@ int main()
 {
 	int j,m,d,td;
 	cout<<"Masukan Jam :";
-	cin<<j;
+	cin>>j;
 	cout<<"Masukan Menit :";
-	cin<<m;
+	cin>>m;
 	cout<<"Masukan Detik :";
-	cin<<d;
+	cin>>d;
 	td=(j*3600)+(m*60)+d;
-	cout<<"Total Detik : "td;
+	cout<<"Total Detik : "<<td;
 	return 0;
 }
