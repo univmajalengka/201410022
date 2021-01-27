@@ -8,7 +8,7 @@ int main()
 	cout<<"3.Perkalian"<<endl;
 	cout<<"4.Pembagian"<<endl;
 	cout<<"Sisa Hasil Bagi"<<endl;
-	int a,b,c menu;
+	int a,b,c, menu;
 	float d,e,f;
 	cin>>menu;
 	if(menu==1){
